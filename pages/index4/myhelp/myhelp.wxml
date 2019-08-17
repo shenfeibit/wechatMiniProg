@@ -1,0 +1,59 @@
+<!--pages/index4/myhelp/myhelp.wxml-->
+<!--pages/index3/mything/mything.wxml-->
+<form bindsubmit="formSubmit">
+<van-cell-group>
+<van-field
+    value="{{tag}}"
+    name="tag"
+    required
+    clearable
+    label="标签"
+    placeholder="请输入标签"
+    autosize
+  />
+  <van-field
+    value="{{title}}"
+    name="title"
+    required
+    clearable
+    label="标题"
+    placeholder="请输入标题"
+    autosize
+  />
+  <van-field
+  value="{{description}}"
+    name="description"
+    label="描述"
+    placeholder="请输入描述"
+    required
+    type="textarea"
+    autosize
+  />
+  <van-field
+  value="{{ contactName }}"
+    name="contactName"
+    label="发布人"
+    placeholder="请输入发布人"
+    required
+  />
+   <van-field
+   value="{{ contactNum }}"
+    name="contactNum"
+    label="联系电话"
+    placeholder="请输入联系电话"
+    required
+  />
+   <van-field
+   value="{{ contactWechat }}"
+    name="contactWechat"
+    label="联系微信"
+    placeholder="请输入联系微信"
+    required
+  />
+</van-cell-group>
+    <button formType="submit">发布信息</button>
+</form>
+
+
+  
+

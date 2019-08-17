@@ -1,0 +1,27 @@
+<!--pages/index/search/search.wxml-->
+<!--search-->
+<van-search value="{{ value }}"
+ bind:focus='goSearch'
+ placeholder="请输入搜索关键词" />
+ <!--tag filter-->
+<scroll-view scroll-x class='tagfilter' style="width: 100%">
+  <view class="row">
+    <view wx:for="{{tag}}" wx:key>
+   <navigator url="../../../pages/index/filter/filter?id={{item}}" open-type='redirect'><button class='tag'>#{{item}}  </button></navigator> 
+    </view> 
+  </view>
+  <view>
+  <view wx:for="{{plats}}" wx:key wx:for-item="eachplat">
+    <view wx:for="{{eachplat}}" wx:key wx:for-item="plat">
+      <view wx:for="{{plat.tag}}" wx:key wx:for-item="id">
+      <view wx:for="{{id}}" wx:key>
+          <view  wx:if='{{item==tag}}' class ="exhibits row">
+            <image class="emage" src='{{plat.image}}'></image>
+            <view> 
+              <view>菜名：{{plat.name}}</view>
+              <view>价格：{{plat.price}}</view>
+              <navigator url="../../../pages/index/resto/resto?id={{plat.resto}}"> 
+                <button>{{plat.resto}}</button>
+              </navigator>
+</view></view></view></view></view></view></view> 
+</scroll-view>

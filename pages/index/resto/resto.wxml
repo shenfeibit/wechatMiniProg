@@ -1,0 +1,55 @@
+<!--pages/index/resto/resto.wxml-->
+<view class ="row">
+<!--resto image-->
+  <view>
+    <image class='emage' src='../../../images/01.png'></image>
+  </view>
+  <view>
+  <!--resto name
+  <view class="title">{{resto}}</view>-->
+  <view class="title">{{restaurant.name}}</view>
+  <view class='little black'>加微信</view>
+  </view>
+</view>
+<!--container for introductions-->
+<view class='part1 center padbot'>
+<view class ="row">
+  <view class='little black'>商家简介：</view>
+  <view class='little'>{{restaurant.description}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>餐厅地址：</view>
+  <view class='little'>{{restaurant.address}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>联系电话：</view>
+  <view class='little'>{{restaurant.telephone}}</view>
+</view>
+</view>
+
+<!--container for plats-->
+<view class='part1 center'>
+<view class ="row">
+  <view class='title1'>热销菜品</view>
+  <view class='titlefollower'>Hot!</view>
+  <view class='titleAll'>查看所有菜品</view>
+</view>
+  <view wx:for="{{restaurant.plats}}" wx:key>
+      <view class ="part2 row">
+       <image class="emage" src='{{item.image}}'></image>
+       <view class='part3'>
+        <view class='title2'>{{item.name}}</view>
+        <view class='little' >{{item.description}}</view>
+        <view class='little' >赞 {{item.aimer}}</view>
+        <view class ="row">
+          <view class='price'>€{{item.price}}</view>
+          <view class='little nearby'>/份</view>
+        </view>
+        <!--
+        <navigator url="../../pages/index/resto/resto?id={{item.resto}}"> 
+          <button>{{item.resto}}</button>
+        </navigator>
+        -->
+       </view></view> <view class='line'></view>  
+    </view> 
+</view>

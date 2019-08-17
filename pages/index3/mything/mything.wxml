@@ -1,0 +1,60 @@
+<!--pages/index3/mything/mything.wxml-->
+<form bindsubmit="formSubmit">
+<view class='part1 center padtop padbot'>
+<van-cell-group>
+  <navigator url="/pages/index3/insertThingPhoto/insertThingPhoto"> 
+      <button bindtap="uploadPhoto" class='photo'>+</button>
+  </navigator>
+  <van-field
+  value="{{ name}}"
+    name="name"
+    required
+    clearable
+    label="物品名称"
+    placeholder="请输入物品名称"
+    autosize
+  />
+  <van-field
+  value="{{ description }}"
+    name="description"
+    label="描述"
+    placeholder="请输入描述"
+    required
+    type="textarea"
+    autosize
+  />
+  <van-field
+  value="{{ price }}"
+    name="price"
+    label="价格"
+    placeholder="请输入价格"
+    required
+  />
+   <van-field
+  value="{{ contactName }}"
+    name="contactName"
+    label="发布人"
+    placeholder="请输入发布人"
+    required
+  />
+   <van-field
+   value="{{ contactNum }}"
+    name="contactNum"
+    label="联系电话"
+    placeholder="请输入联系电话"
+    required
+  />
+   <van-field
+   value="{{ contactWechat }}"
+    name="contactWechat"
+    label="联系微信"
+    placeholder="请输入联系微信"
+    required
+  />
+</van-cell-group>
+    <button formType="submit">发布信息</button>
+</view>
+</form>
+
+
+  

@@ -1,0 +1,8 @@
+/* pages/index3/mything/mything.wxss */
+.photo {
+ width: 200rpx;
+ height: 200rpx;
+ font-size: 100rpx;
+ text-align:center;
+ line-height:100px;
+}

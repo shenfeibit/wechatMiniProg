@@ -1,0 +1,8 @@
+/* pages/index4/index4.wxss */
+page {
+    background-color: #ededed;
+}
+.row1{
+  text-align: center;
+  color: gray;
+}

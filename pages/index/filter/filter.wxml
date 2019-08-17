@@ -1,0 +1,23 @@
+<!--pages/index/filter/filter.wxml-->
+<view><text>#{{tag}}</text></view>
+<!--container for selected plats-->
+<view>
+  <view wx:for="{{restaurant.plats}}" wx:key>
+      <view class ="part2 row">
+       <image class="emage" src='{{item.image}}'></image>
+       <view class='part3'>
+        <view class='title2'>{{item.name}}</view>
+        <view class='little' >{{item.description}}</view>
+        <view class='little' >赞 {{item.aimer}}</view>
+        <view class ="row">
+          <view class='price'>€{{item.price}}</view>
+          <view class='little nearby'>/份</view>
+        </view>
+        <!--
+        <navigator url="../../pages/index/resto/resto?id={{item.resto}}"> 
+          <button>{{item.resto}}</button>
+        </navigator>
+        -->
+       </view></view> <view class='line'></view>  
+    </view> 
+</view> 

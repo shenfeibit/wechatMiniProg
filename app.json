@@ -1,0 +1,68 @@
+{
+  "usingComponents": {
+    "van-search": "/dist/search/index",
+    "van-notice-bar": "/dist/notice-bar/index",
+    "van-field": "/dist/field/index"
+  },
+  "pages": [
+    "pages/active/active",
+    "pages/index/index",
+    "pages/index/filter/filter",
+    "pages/index/search/search",
+    "pages/index/resto/resto",
+    "pages/index2/index2",
+    "pages/index2/myloge/myloge",
+    "pages/index2/filter/filter",
+    "pages/index2/loge/loge",
+    "pages/index3/index3",
+    "pages/index3/thing/thing",
+    "pages/index3/mything/mything",
+    "pages/index4/index4",
+    "pages/index4/help/help",
+    "pages/index4/myhelp/myhelp",
+    "pages/index5/index5"
+  ],
+  "window": {
+    "navigationBarTitleText": "图方便",
+    "navigationBarBackgroundColor": "#342f27",
+    "backgroundColor": "#ededed"
+  },
+  "tabBar": {
+    "backgroundColor": "#342f27",
+    "color":"#ffffff",
+    "selectedColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index2/index2",
+        "text": "租房",
+        "iconPath": "images/icon2.png",
+        "selectedIconPath": "images/icon2a.png"
+      },
+      {
+        "pagePath": "pages/index3/index3",
+        "text": "二手",
+        "iconPath": "images/icon3.png",
+        "selectedIconPath": "images/icon3a.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "好吃",
+        "iconPath": "images/icon.png",
+        "selectedIconPath": "images/icona.png"
+      },
+      {
+        "pagePath": "pages/index4/index4",
+        "text": "生活",
+        "iconPath": "images/icon4.png",
+        "selectedIconPath": "images/icon4a.png"
+      },
+      {
+        "pagePath": "pages/index5/index5",
+        "text": "我的",
+        "iconPath": "images/icon5.png",
+        "selectedIconPath":"images/icon5a.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,94 @@
+<!--pages/index2/myloge/myloge.wxml-->
+<form bindsubmit="formSubmit">
+<view class='part1 center padtop padbot'>
+<van-cell-group>
+  <button bindtap="uploadPhoto" class='photo'>+</button>
+  <van-field
+    value="{{ title }}"
+    name="title"
+    required
+    clearable
+    label="标题"
+    placeholder="请输入标题"
+    autosize
+  />
+  <van-field
+    value="{{ description }}"
+    name="description"
+    label="描述"
+    placeholder="请输入描述"
+    required
+    type="textarea"
+    autosize
+  />
+  <van-field
+  value="{{ location }}"
+    name="location"
+    label="地点"
+    placeholder="请输入地点"
+    required
+    autosize
+  />
+  <van-field
+  value="{{ surface }}"
+    name="surface"
+    label="面积"
+    placeholder="请输入面积"
+    required
+  />
+  <van-field
+  value="{{ price }}"
+    name="price"
+    label="月租金"
+    placeholder="请输入月租金"
+    required
+  />
+  <van-field
+  value="{{ contactName }}"
+    name="contactName"
+    label="发布人"
+    placeholder="请输入发布人"
+    required
+  />
+   <van-field
+   value="{{ contactNum }}"
+    name="contactNum"
+    label="联系电话"
+    placeholder="请输入联系电话"
+    required
+  />
+   <van-field
+   value="{{ contactWechat }}"
+    name="contactWechat"
+    label="联系微信"
+    placeholder="请输入联系微信"
+    required
+  />
+  </van-cell-group>
+  
+  <!--出租时长tag-->
+<view class='taglittle black'>出租时长</view>
+<view class="tagbar">  
+<text wx:for="{{tag1}}" data-idx="{{index}}" class="item {{ ctag1==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag1">{{item}}</text>  
+</view>
+<!--地点tag-->
+<view class='taglittle black'>地点</view>
+<view class="tagbar">  
+<text wx:for="{{tag2}}" data-idx="{{index}}" class="item {{ ctag2==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag2">{{item}}</text>  
+</view>
+<!--交通tag-->
+<view class='taglittle black'>交通</view>
+<view class="tagbar">  
+<text wx:for="{{tag3}}" data-idx="{{index}}" class="item {{ ctag3==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag3">{{item}}</text>  
+</view>
+<!--合租tag-->
+<view class='taglittle black'>是否合租</view>
+<view class="tagbar">  
+<text wx:for="{{tag4}}" data-idx="{{index}}" class="item {{ ctag4==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag4">{{item}}</text>  
+</view>
+</view>
+    <button formType="submit">发布信息</button>
+</form>
+
+
+  

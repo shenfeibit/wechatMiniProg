@@ -1,0 +1,4 @@
+/* pages/index/search/search.wxss */
+page {
+    background-color: #ededed;
+}

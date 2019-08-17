@@ -1,0 +1,27 @@
+<!--pages/index4/index4.wxml-->
+<van-notice-bar 
+  text="在生活模块，你可以发布求助，招工等帖子" backgroundColor='white' color='#a0a0a0'
+/>
+<!--container for helps-->
+<view class='part1 center'>
+<view class ="row"><view class='title1'>帖子</view></view>
+<!--container-->
+<view class='part1 center padtop'>
+  <view wx:for="{{allDiscussions}}" wx:key>
+     <navigator url="../../pages/index4/help/help?id={{item.id}}"> 
+     <view class ="part2">
+       <view class='part3'>
+        <view class='title2'>{{item.title}}</view>
+        <view class='little'>{{item.description}}</view>
+        </view>
+       </view></navigator>
+    <view class='line'></view></view> </view> 
+<view class='row1'>木有更多啦</view>
+</view>
+
+<!--fabu-->
+  <navigator url="../../pages/index4/myhelp/myhelp"> 
+      <button class="fabu">我要发布</button>
+  </navigator>
+
+<!--微信 电话 qq ... 联系方式-->

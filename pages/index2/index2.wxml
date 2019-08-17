@@ -1,0 +1,51 @@
+<!--pages/index2/index2.wxml-->
+<!--tag filter https://www.jianshu.com/p/f490c62643d3 -->
+<view class='part1 center padtop padbot'>
+<button class="btn_mini" plain='true' bindtap="noneAll">全部不限</button>
+<!--出租时长tag-->
+<view class='taglittle black'>出租时长</view>
+<view class="tagbar">  
+<text wx:for="{{tag1}}" data-idx="{{index}}" class="item {{ ctag1==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag1">{{item}}</text>  
+</view>
+<!--地点tag-->
+<view class='taglittle black'>地点</view>
+<view class="tagbar">  
+<text wx:for="{{tag2}}" data-idx="{{index}}" class="item {{ ctag2==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag2">{{item}}</text>  
+</view>
+<!--交通tag-->
+<view class='taglittle black'>交通</view>
+<view class="tagbar">  
+<text wx:for="{{tag3}}" data-idx="{{index}}" class="item {{ ctag3==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag3">{{item}}</text>  
+</view>
+<!--合租tag-->
+<view class='taglittle black'>是否合租</view>
+<view class="tagbar">  
+<text wx:for="{{tag4}}" data-idx="{{index}}" class="item {{ ctag4==index ? 'active' : ''}}" wx:key="unique" bindtap="changeTag4">{{item}}</text>  
+</view>
+</view>
+
+<!--container for loges-->
+<view class='part1 center'>
+<view class ="row"></view>
+  <view wx:for="{{allHouses}}" wx:key>
+  <navigator url="../../pages/index2/loge/loge?id={{item.id}}"> 
+      <view class ="part2 row">
+      <image class="emage" src='../../images/plat1.jpg'></image>
+       <view class='part3'>
+        <view class='title2'>{{item.title}}</view>
+        <view class='little'>{{item.description}}</view>
+        <view class='little'>{{item.surface}} m²</view>
+        <view class ="row">
+          <view class='price'>€{{item.price}}</view>
+          <view class='little nearby'>/月</view>
+        </view>
+       </view></view> 
+    </navigator> 
+    </view> 
+    <view class='line'></view>
+    <view class='row1'>木有更多啦</view>
+</view>
+
+  <navigator url="../../pages/index2/myloge/myloge"> 
+      <button class="fabu">我要发布</button>
+  </navigator>

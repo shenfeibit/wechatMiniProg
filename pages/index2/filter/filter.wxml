@@ -1,0 +1,14 @@
+<!--pages/index2/filter/filter.wxml-->
+<view><text>#{{tag}}</text></view>
+<!--container for selected plats-->
+<view>
+  <view wx:for="{{loges}}" wx:key wx:for-item="eachplat">
+    <view wx:for="{{eachplat}}" wx:key wx:for-item="plat">
+      <view wx:for="{{plat.tag}}" wx:key wx:for-item="id">
+      <view wx:for="{{id}}" wx:key>
+          <view  wx:if='{{item==tag}}' class ="exhibits row">
+            <image class="emage" src='{{plat.image}}'></image>
+            <view> 
+              <view>标题：{{plat.title}}</view>
+              <view>价格：{{plat.price}}</view>
+</view></view></view></view></view></view></view>

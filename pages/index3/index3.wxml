@@ -1,0 +1,26 @@
+<!--pages/index3/index3.wxml-->
+<!--container for restos-->
+<view class='part1 center'>
+<view class ="row">
+<view class='title1'>二手商品</view></view>
+  <view wx:for="{{allObjects}}" wx:key>
+    <navigator url="../../pages/index3/thing/thing?id={{item.id}}">
+      <view class ="part2 row">
+      <image class="emage" src='../../images/plat1.jpg'></image>
+       <view class='part3'>
+        <view class='title2'>{{item.name}}</view>
+        <view class='little'>{{item.discription}}</view>
+        <view class='little'>赞 {{item.aimer}}</view>
+        <view class ="row">
+        <view class='price'>€{{item.price}}</view><view>
+            <view wx:if='{{item.ilike}}'><button id="{{item.id}}" class="btn_mini foot" bindtap="szan">已点赞</button></view>
+            <view wx:else><button id="{{item.id}}" class="btn_mini foot" plain='true' bindtap="dzan">点赞</button></view>
+          </view></view>
+       </view></view> </navigator> 
+       <view class='line'></view>
+    </view> 
+</view>
+
+  <navigator url="../../pages/index3/mything/mything"> 
+      <button class="fabu">我要发布</button>
+  </navigator>

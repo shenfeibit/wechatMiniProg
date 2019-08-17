@@ -1,0 +1,30 @@
+/* pages/index/resto/resto.wxss */
+.toolbar{
+ 
+}
+.list-top{
+ flex-direction:row;
+ display: flex;
+}
+.list-menu{
+  width: 50%;
+  justify-content: center;
+  display: flex;
+}
+.list-menu.true{
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  border: 1px solid #b4282d;
+  color: #b4282d;
+}
+.titleAll{
+  color: darkgray;
+  font-size: 15px;
+  text-align: right;
+  float: right;
+  width : 200px
+}
+page {
+    background-color: #ededed;
+}

@@ -1,0 +1,27 @@
+<!--pages/index4/help/help.wxml-->
+<view class='part1 center padbot'>
+<view class ="row">
+  <view >{{discussionById.title}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>标签：</view>
+  <view class='little'>{{discussionById.tag}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>描述：</view>
+  <view class='little'>{{discussionById.description}}</view>
+</view>
+
+<view class ="row">
+  <view class='little black'>联系人：</view>
+  <view class='little'>{{discussionById.contactName}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>联系电话：</view>
+  <view class='little'>{{discussionById.contactNum}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>微信：</view>
+  <view class='little'>{{discussionById.contactWechat}}</view>
+</view>
+</view>

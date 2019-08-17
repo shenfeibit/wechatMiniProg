@@ -1,0 +1,11 @@
+/* pages/index2/myloge/myloge.wxss */
+page {
+    background-color: #ededed;
+}
+.photo {
+ width: 200rpx;
+ height: 200rpx;
+ font-size: 100rpx;
+ text-align:center;
+ line-height:100px;
+}

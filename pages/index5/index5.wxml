@@ -1,0 +1,83 @@
+<!--pages/index5/index5.wxml-->
+<!--user icon & name-->
+<view class ='bgrey'><view class ='row bblack'>
+  <open-data class='icon' mode='aspectFit' type='userAvatarUrl'></open-data>
+  <open-data class='username' type="userNickName"></open-data>
+</view></view>
+<!--tab-->
+<van-tabs active="{{ active }}" color="orange">
+  <!--我的二手-->
+  <van-tab title="我的二手">
+  <view class='part1 center'>
+<view class ="row"></view>
+  <view wx:for="{{data1}}" wx:key>
+      <view class ="part2 row">
+      <image class="emage" src='../../images/plat1.jpg'></image>
+       <view class='part3'>
+        <view class='title2'>{{item.name}}</view>
+        <view class='little'>{{item.discription}}</view>
+        <view class='little'>赞 {{item.aimer}}</view>
+        <view class ="row">
+        <view class='price'>€{{item.price}}</view>
+        <view class ="row">
+        <image class="icon5" id="{{item.id}}" bindtap='modifyObject' src='../../images/icon_modify.png'></image>
+        <image class="icon5" id="{{item.id}}" bindtap='deleteObject' src='../../images/icon_delete.png'></image>
+        </view>
+        </view>
+       </view></view> <view class='line'></view>
+    </view> 
+</view></van-tab>
+  <!--我的生活-->
+  <van-tab title="我的生活">
+  <view class='part1 center'>
+<!--container-->
+<view class='part1 center padtop'>
+  <view wx:for="{{data2}}" wx:key>
+     <view class ="part2">
+       <view class='part3'>
+        <view class='title2'>{{item.title}}</view>
+        <view class='little'>{{item.description}}</view>
+        </view>
+        <view class ="row">
+        <image class="icon5" id="{{item.id}}" bindtap='modifyLife' src='../../images/icon_modify.png'></image>
+        <image class="icon5" id="{{item.id}}" bindtap='deleteLife' src='../../images/icon_delete.png'></image>
+        </view>
+       </view>
+    <view class='line'></view></view> </view> 
+</view>
+  </van-tab>
+  <!--我的租房-->
+  <van-tab title="我的租房">
+  <view class='part1 center'>
+<view class ="row"></view>
+  <view wx:for="{{data3}}" wx:key>
+      <view class ="part2 row">
+      <image class="emage" src='../../images/plat1.jpg'></image>
+       <view class='part3'>
+        <view class='title2'>{{item.title}}</view>
+        <view class='little'>{{item.description}}</view>
+        <view class='little'>{{item.surface}} m²</view>
+        <view class ="row">
+          <view class='price'>€{{item.price}}</view>
+          <view class='little nearby'>/月</view>
+          <view class ="row">
+        <image class="icon5" id="{{item.id}}" bindtap='modifyHouse' src='../../images/icon_modify.png'></image>
+        <image class="icon5" id="{{item.id}}" bindtap='deleteHouse' src='../../images/icon_delete.png'></image>
+        </view>
+        </view> 
+       </view></view> 
+    </view> 
+</view></van-tab>
+</van-tabs>
+<!-- 自定义弹框开始 -->
+  <view wx:if="{{showModel}}" class="model">
+    <view class="modelTitle">
+      获取微信授权信息
+    </view>
+    <view class="modelBody">微信登录需要获取您的用户信息，请前往设置</view>
+    <view class="btns">
+      <button open-type="getUserInfo" class="agree" bindgetuserinfo="agreeGetUser" lang="zh_CN">去设置</button>
+    </view>
+  </view>
+  <view wx:if="{{showModel}}" class="mask"></view>
+  <!-- 自定义弹框结束 -->

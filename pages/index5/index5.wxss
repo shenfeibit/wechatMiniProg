@@ -1,0 +1,24 @@
+/* pages/index5/index5.wxss */
+page {
+    background-color: #ededed;
+display: flex;  
+  flex-direction: column;  
+  height: 100%;  
+} 
+.footer{padding:10px 15px}
+.navbar{  
+  flex: none;  
+  display: flex;  
+  background: #fff;  
+}  
+.navbar .item{  
+  position: relative;  
+  flex: auto;  
+  text-align: center;  
+  line-height: 80rpx;  
+  font-size:14px;
+}  
+/* 顶部导航字体颜色 */
+.navbar .item.active{  
+   color:orange;
+}  

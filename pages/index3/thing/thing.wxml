@@ -1,0 +1,22 @@
+<!--pages/index3/thing/thing.wxml-->
+<view class='part1 center padbot'>
+<view class ="row">
+  <view >{{object.title}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>描述：</view>
+  <view class='little'>{{object.description}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>地址：</view>
+  <view class='little'>{{object.location}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>联系人：</view>
+  <view class='little'>{{object.contactName}}</view>
+</view>
+<view class ="row">
+  <view class='little black'>联系电话：</view>
+  <view class='little'>{{object.contactNum}}</view>
+</view>
+</view>

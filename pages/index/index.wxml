@@ -1,0 +1,27 @@
+<!--pages/index/index.wxml-->
+<!--search-->
+<van-search  bind:focus='goSearch' placeholder="搜你想吃" />
+<!--swiper for ads-->
+<swiper autoplay indicator-dots circular>
+<swiper-item> <image src='../../images/00.png'></image> </swiper-item>
+  <swiper-item> <image src='../../images/01.png'></image> </swiper-item>
+  <swiper-item> <image src='../../images/02.png'></image> </swiper-item>
+  <swiper-item> <image src='../../images/03.png'></image> </swiper-item>
+</swiper>
+<!--notification-->
+<van-notice-bar text="从即日起，外卖团队将就送餐服务进行调整" backgroundColor='white' color='#a0a0a0'/>
+<!--container for restos-->
+<view class='part1 center'>
+<view class ="row">
+<view class='title1'>热门中餐</view></view>
+  <view wx:for="{{allRestaurants}}" wx:key>
+     <navigator url="../../pages/index/resto/resto?id={{item.id}}"> 
+      <view class ="part2 row">
+      <image class="emage" src='../../images/plat1.jpg'></image>
+       <view class='part3'>
+        <view class='title2'>{{item.name}}</view>
+        <view class='little'>{{item.description}}</view>
+       </view></view> </navigator> 
+   <view class='line'></view>   </view> 
+</view>
+   
